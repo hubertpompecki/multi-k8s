@@ -1,6 +1,6 @@
-docker build -t hpompecki/multi-client:latest -t hpompecki/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t hpompecki/multi-server:latest -t hpompecki/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t hpompecki/multi-worker:latest -t hpompecki/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t hpompecki/multi-client:latest -t hpompecki/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t hpompecki/multi-server:latest -t hpompecki/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t hpompecki/multi-worker:latest -t hpompecki/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push hpompecki/multi-client:latest
 docker push hpompecki/multi-client:$SHA
